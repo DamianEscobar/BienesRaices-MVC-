@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.alerta {
+    padding: .5rem;
+    text-align: center;
+    color: #ffffff;
+    font-weight: v.$bold;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    
+    &.error {
+        background-color: v.$rojo;
+    }
+    &.exito {
+        background-color: v.$verde;
+    }
+}
+
+table.propiedades {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        background-color: v.$verde;
+
+        th {
+            color: #ffffff;
+            padding: 2rem;
+        }
+    }
+
+    .imagen-table {
+        width: 10rem;
+    }
+
+    tbody {
+        tr {
+
+            td {
+
+                .boton-rojo {
+                    width: 100%;
+                    @include m.boton(block,v.$rojo);
+                }
+                .boton-amarillo {
+                    @include m.boton(block,v.$amarillo);
+                }
+                
+            }
+        }
+    }
+}
+
+.imagen-small {
+    width: 30rem;
+}
+
