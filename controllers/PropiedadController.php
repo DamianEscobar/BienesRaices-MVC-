@@ -12,8 +12,6 @@ class PropiedadController
 {
     public static function index(Router $router)
     {
-        // Autenticar al usuario
-        estaAuten();
 
         $result = $_GET['result'] ?? null;
 
@@ -30,9 +28,6 @@ class PropiedadController
 
     public static function create(Router $router)
     {
-
-        // Autenticar al usuario
-        estaAuten();
 
         $propiedad = new Propiedad;
 

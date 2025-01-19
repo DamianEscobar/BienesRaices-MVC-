@@ -11,8 +11,6 @@ class VendedorController
 
     public static function create(Router $router)
     {
-        // Autenticar al usuario
-        estaAuten();
 
         $vendedor = new Vendedor;
 
@@ -41,8 +39,6 @@ class VendedorController
 
     public static function update(Router $router)
     {
-        // Autenticar al usuario
-        estaAuten();
 
         // Arreglo con los mensajes de errores
         $errores = Vendedor::getErrores();
